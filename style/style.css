@@ -71,7 +71,7 @@ html, body {
     font-size: 20px; /* Font size as requested */
     color: #333333; /* Dark grey text for readability */
 }
-
+ 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
