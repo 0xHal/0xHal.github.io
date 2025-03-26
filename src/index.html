@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Responsive 3x3 Grid with Images</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html">Gallery</a>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="index.html">Home</a></li>
+            <li class="navbar-item"><a href="about.html">About</a></li>
+            <li class="navbar-item"><a href="gallery.html">Gallery</a></li>
+            <li class="navbar-item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/1/600/400" alt="Random Image 1" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>A serene beach sunset view.</p>
+                <a href="https://example.com/beach" target="_blank">Learn More</a>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/2/600/400" alt="Random Image 2" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>Mountain landscape with snow peaks.</p>
+                <!-- No URL for this item -->
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/3/600/400" alt="Random Image 3" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>City skyline at night.</p>
+                <a href="https://example.com/city" target="_blank">Learn More</a>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/4/600/400" alt="Random Image 4" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>Lush forest with a waterfall.</p>
+                <a href="https://example.com/forest" target="_blank">Learn More</a>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/5/600/400" alt="Random Image 5" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>Desert dunes under a clear sky.</p>
+                <!-- No URL for this item -->
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/6/600/400" alt="Random Image 6" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>Autumn leaves in a park.</p>
+                <a href="https://example.com/autumn" target="_blank">Learn More</a>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/7/600/400" alt="Random Image 7" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>Urban street with vibrant graffiti.</p>
+                <!-- No URL for this item -->
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/8/600/400" alt="Random Image 8" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>Calm lake surrounded by mountains.</p>
+                <a href="https://example.com/lake" target="_blank">Learn More</a>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-box">
+                <img src="https://picsum.photos/id/9/600/400" alt="Random Image 9" onclick="openModal(this.src)">
+            </div>
+            <div class="sub-box">
+                <p>Sunflower field in bloom.</p>
+                <!-- No URL for this item -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="modalImage" class="modal-content" alt="Full-size Image">
+    </div>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>
