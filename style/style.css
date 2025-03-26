@@ -57,6 +57,21 @@ html, body {
     color: #000000; /* Black on hover */
 }
 
+/* Add to ../style/style.css */
+.construction-message {
+    background-color: #ffffff; /* White background for the message */
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    margin-top: 60px; /* Offset for fixed navbar */
+}
+
+.construction-message p {
+    font-size: 20px; /* Font size as requested */
+    color: #333333; /* Dark grey text for readability */
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
@@ -171,6 +186,8 @@ html, body {
     color: #bbbbbb;
     text-decoration: none;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
