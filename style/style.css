@@ -57,25 +57,34 @@ html, body {
     color: #000000; /* Black on hover */
 }
 
-/* Add to ../style/style.css */
+/* Styles for the Under Construction Page */
+.construction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: #e0e0e0; /* Light grey background to match the project */
+}
+
 .construction-message {
     background-color: #ffffff; /* White background for the message */
     padding: 20px 40px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center;
-    margin-top: 60px; /* Offset for fixed navbar */
 }
 
 .construction-message p {
     font-size: 20px; /* Font size as requested */
     color: #333333; /* Dark grey text for readability */
 }
- 
+
+/* Grid Styles (for index.html) */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
-    grid-template-rows: repeat(3, 1fr); /* 3 rows by default */
+    grid-template-rows: repeat(3, auto); /* Auto rows to fit content */
     gap: 15px; /* Space between grid items */
     min-height: calc(100vh - 60px); /* Adjust for navbar height */
     width: 100%; /* Full width */
@@ -94,11 +103,12 @@ html, body {
     background-color: #ffffff; /* White background for each grid item */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    min-height: 300px; /* Ensure enough space for both main-box and sub-box */
 }
 
 .main-box {
     width: 100%;
-    height: 100%; /* Takes up most of the grid item's height */
+    height: 200px; /* Fixed height to prevent overflow */
     border-radius: 5px;
     overflow: hidden; /* Ensure the image doesn't overflow */
     cursor: pointer; /* Indicate the image is clickable */
@@ -113,17 +123,17 @@ html, body {
 }
 
 .sub-box {
-    width: 100%;
-    height: 25%; /* Increased height to accommodate description and link */
-    background-color: #e9e9e9; /* White background for sub-boxes */
+    width: 100%; /* Full width of the grid item */
+    min-height: 80px; /* Ensure enough space for description and link */
+    background-color: #ffffff; /* White background for sub-boxes */
     color: #333333; /* Dark grey text for readability */
-    margin-top: 5%;
+    margin-top: 10px; /* Space between main-box and sub-box */
     display: flex;
     flex-direction: column; /* Stack description and link vertically */
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     font-size: 1rem;
 }
 
@@ -132,6 +142,7 @@ html, body {
     font-size: 0.9rem; /* Slightly smaller font for description */
     text-align: center;
     color: #333333; /* Dark grey for description text */
+    word-wrap: break-word; /* Prevent text overflow */
 }
 
 .sub-box a {
@@ -145,7 +156,7 @@ html, body {
     color: #000000; /* Black on hover for better visibility */
 }
 
-/* Modal Styles */
+/* Modal Styles (for index.html) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -187,8 +198,6 @@ html, body {
     text-decoration: none;
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .grid-container {
@@ -198,7 +207,16 @@ html, body {
         padding: 10px;
     }
 
+    .grid-item {
+        min-height: 280px; /* Adjust for smaller screens */
+    }
+
+    .main-box {
+        height: 180px; /* Adjust height for smaller screens */
+    }
+
     .sub-box {
+        min-height: 70px; /* Adjust for smaller screens */
         font-size: 0.9rem;
     }
 
@@ -229,12 +247,16 @@ html, body {
         padding: 8px;
     }
 
+    .grid-item {
+        min-height: 260px; /* Adjust for smaller screens */
+    }
+
     .main-box {
-        height: 60%; /* Adjust height for smaller screens */
+        height: 160px; /* Adjust height for smaller screens */
     }
 
     .sub-box {
-        height: 20%; /* Adjust height for smaller screens */
+        min-height: 60px; /* Adjust for smaller screens */
         font-size: 0.8rem;
     }
 
